@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet Our Experts</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    .experts-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .expert-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .expert-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .expert-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .expert-info {
+      margin-top: 15px;
+    }
+
+    .expert-info h3 {
+      margin: 10px 0 5px;
+      font-size: 1.25rem;
+    }
+
+    .expert-info p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .chart-container {
+      margin: 15px 0;
+    }
+
+    .expert-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .btn {
+      padding: 10px;
+      flex: 1;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-follow {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-follow:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-book {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn-book:hover {
+      background-color: #1e7e34;
+    }
+
+    @media (max-width: 600px) {
+      .expert-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Meet Our Industry Experts</h1>
+  <p>Learn from professionals with proven track records</p>
+</header>
+
+<section class="experts-container" id="expertsList">
+  <!-- Expert cards will be generated here -->
+</section>
+
+<script>
+  const experts = [
+    {
+      name: "John Carter",
+      role: "Technical Analyst",
+      image: "https://i.pravatar.cc/300?img=11",
+      strategy: "Breakout & Trend Following",
+      winRate: "78%",
+      performance: [10, 15, 20, 22, 25, 30],
+    },
+    {
+      name: "Emily Tran",
+      role: "Swing Trader",
+      image: "https://i.pravatar.cc/300?img=47",
+      strategy: "Support/Resistance with RSI",
+      winRate: "83%",
+      performance: [5, 8, 14, 18, 23, 28],
+    },
+    {
+      name: "Mohammed Ali",
+      role: "Scalper",
+      image: "https://i.pravatar.cc/300?img=65",
+      strategy: "Momentum Scalping (1-min)",
+      winRate: "74%",
+      performance: [8, 12, 15, 17, 19, 25],
+    }
+  ];
+
+  const expertsList = document.getElementById('expertsList');
+
+  experts.forEach((expert, index) => {
+    const card = document.createElement('div');
+    card.className = 'expert-card';
+    card.innerHTML = `
+      <img src="${expert.image}" class="expert-img" alt="${expert.name}">
+      <div class="expert-info">
+        <h3>${expert.name}</h3>
+        <p><strong>Role:</strong> ${expert.role}</p>
+        <p><strong>Strategy:</strong> ${expert.strategy}</p>
+        <p><strong>Win Rate:</strong> ${expert.winRate}</p>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart${index}" width="300" height="150"></canvas>
+      </div>
+      <div class="expert-actions">
+        <button class="btn btn-follow">Follow</button>
+        <button class="btn btn-book">Book 1-on-1</button>
+      </div>
+    `;
+    expertsList.appendChild(card);
+
+    const ctx = document.getElementById(`chart${index}`).getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6'],
+        datasets: [{
+          label: 'Performance (%)',
+          data: expert.performance,
+          borderColor: '#0d6efd',
+          backgroundColor: 'rgba(13, 110, 253, 0.1)',
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 5 }
+          }
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

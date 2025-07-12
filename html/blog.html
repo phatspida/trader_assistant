@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PROTOCOL | Your Ultimate Trader Guide </title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f5f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 4rem 4rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .blog-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .blog-excerpt {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .read-more {
+      margin-top: 15px;
+      display: inline-block;
+      color: #007bff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 20px;
+      }
+
+      .blog-content {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Protocol Capitals Trading Blog</h1>
+  <p>Tips, Strategies & Student Spotlights</p>
+</header>
+
+<section class="blog-container" id="blogList">
+  <!-- Blog posts will be inserted here -->
+</section>
+
+<script>
+  const blogPosts = [
+    {
+      title: "5 Mistakes Beginner Traders Make",
+      excerpt: "Learn about the most common pitfalls new traders fall into and how to avoid them.",
+      image: "blog-thumbnail.jpg",
+      link: "#"
+    },
+    {
+      title: "How to Master Risk Management",
+      excerpt: "Discover key techniques for protecting your capital while maximizing gains.",
+      image: "blog-thumbnail.jpg",
+      link: "#"
+    },
+    {
+      title: "Student Spotlight: Sarah's 6-Figure Journey",
+      excerpt: "Sarah joined with no experience and built a consistent trading strategy. Here's how she did it.",
+      image: "blog-thumbnail.jpg",
+      link: "#"
+    },
+    {
+      title: "Understanding Technical Indicators",
+      excerpt: "We break down RSI, MACD, moving averages, and more — made simple for new traders.",
+      image: "blog-thumbnail.jpg",
+      link: "#"
+    }
+  ];
+
+  const blogList = document.getElementById('blogList');
+
+  blogPosts.forEach(post => {
+    const card = document.createElement('div');
+    card.className = 'blog-card';
+    card.innerHTML = `
+      <img src="${post.image}" class="blog-image" alt="Blog Image">
+      <div class="blog-content">
+        <div class="blog-title">${post.title}</div>
+        <div class="blog-excerpt">${post.excerpt}</div>
+        <a href="${post.link}" class="read-more">Read More →</a>
+      </div>
+    `;
+    blogList.appendChild(card);
+  });
+</script>
+
+</body>
+</html>

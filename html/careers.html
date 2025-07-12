@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTOCOL | Your Ultimate Trader Guide </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favsicon.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            color: #1f2937;
+        }
+        /* header {
+            background-color: #0f172a;
+            padding: 1rem 2rem;
+            color: white;
+            text-align: center;
+        } */
+        .hero {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .careers-section {
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: slideUp 1s ease;
+        }
+        .career-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .career-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 50px rgba(0,0,0,0.1);
+        }
+        .career-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #0f172a;
+        }
+        .career-card h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #0f172a;
+        }
+        .career-card p {
+            font-size: 1rem;
+            color: #475569;
+        }
+        .apply-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: #0f172a;
+            color: white;
+            border-radius: 0.4rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .apply-btn:hover {
+            background: #1e293b;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #0f172a;
+            color: white;
+            margin-top: 4rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Join Our Team</h1>
+        <p>We are looking for passionate mentors and innovators who are eager to empower the next generation of traders. Ready to make an impact?</p>
+    </section>
+
+    <section class="careers-section">
+        <div class="career-card">
+            <h2>Fund Trader</h2>
+            <p>Share your expertise and guide aspiring traders to success. Remote, flexible hours, highly rewarding work.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="career-card">
+            <h2>Content Creator (Trading Focus)</h2>
+            <p>Create insightful market analysis, educational videos, and articles. Join a team that values education and innovation.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="career-card">
+            <h2>Community Manager</h2>
+            <p>Engage with our vibrant community, host live sessions, and foster a positive learning environment for traders worldwide.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="career-card">
+            <h2>Marketing Strategist</h2>
+            <p>Craft compelling campaigns to attract and grow our mentorship community. A passion for finance and education is a must!</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <span>&copy; 2019-2025 protocolcapitals.com. All Rights Reserved.</span>
+        <span>Disclaimer: We are not affiliated with any Propriety Firm or Organisation, Inc.</span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!-- Full Updated HTML Code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROTOCOL | Get Funded </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6aff91fdb7.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="../images/favsicon.png">
+  <link rel="stylesheet" href="../stylesheet/stylesheet.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      position: relative;
+      height: 95vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(15,23,42,0.8));
+      z-index: -1;
+    }
+    header h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 2s ease-out forwards;
+    }
+    header p {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #ffffff;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.5s ease-out forwards;
+      line-height: 0.9rem;
+    }
+    .header-title{
+      font-weight: 700;
+      font-size: 6rem;
+      margin-bottom: 2.8rem;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInUp 2s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .mentorship-preference, .mentorship-overview{
+        display: flex;
+        margin-top: 3.5rem;
+    }
+    .mentorship-preference a{
+        text-decoration: none;
+        display: block;
+        width: 15rem;
+        border: 1px solid #ebeaea;
+        font-size: 0.9rem;
+        color: #fff;
+        border-radius: 4px;
+        padding: 17px 32px;
+        margin-right: 3rem;
+        margin-bottom: 4rem;
+    }
+    .mentorship-preference a:first-child{
+      background-color: #0066fe;
+      border: 1px solid #0066fe;
+    }
+    .mentorship-preference a:first-child:hover{
+      background-color: #5f9fff;
+      color: #ffffff;
+    }
+    .mentorship-preference a:last-child, .mentorship-overview a:last-child{
+        margin-right: unset;
+    }
+    .mentorship-preference a:hover{
+        border: 1px solid transparent;
+        color: #000000;
+        background-color: #ffffff;
+        opacity: 0.9;
+        cursor: pointer;
+    }
+    .mentorship-overview a{
+      text-decoration: none;
+      display: block;
+      border: 1px solid #ebeaea;
+      font-size: 0.9rem;
+      color: #fff;
+      border-radius: 20px;
+      padding: 14px 25px;
+      margin-right: 2rem;
+    }
+    .mentorship-overview a i{
+      color: #F5C518;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #facc15;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .challenge {
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .challenge:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .challenge h2 {
+      color: #fbbf24;
+    }
+    .challenge ul {
+      padding-left: 20px;
+      margin: 15px 0;
+    }
+    .challenge ul li {
+      margin-bottom: 8px;
+    }
+    .btn {
+      padding: 12px 20px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #2563eb;
+    }
+    .benefits, .payment, .cart {
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid #475569;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+    .payment-icons i {
+      font-size: 28px;
+      margin: 0 10px;
+      color: #fcd34d;
+    }
+    .cart ul {
+      padding-left: 20px;
+    }
+    footer {
+      border: 1px solid transparent;
+      color: white;
+      overflow: hidden;
+      position: sticky;
+      bottom: 0;
+      left: 0;
+    }
+    #scroll-text{
+      font-size: 1.5rem;
+      /* transform properties */
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+
+      /* animation properties */
+      -moz-animation: my-animation 30s linear infinite;
+      -webkit-animation: my-animation 30s linear infinite;
+      animation: my-animation 30s linear infinite;
+    }
+    #scroll-text span{
+        margin-right: 4rem;
+    }
+    #scroll-text img{
+        width: 110px;
+    }
+    @-moz-keyframes my-animation{
+        from{
+            -moz-transform: translateX(100%);
+        }
+        to{
+            -moz-transform: translateX(-100%);
+        }
+    }
+    @-webkit-keyframes my-animation{
+        from{
+            -webkit-transform: translateX(100%);
+        }
+        to{
+            -webkit-transform: translateX(-100%);
+        }
+    }
+    @keyframes my-animation{
+        from{
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+        to{
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
+    }
+    a {
+      color: #60a5fa;
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="../videos/background-video2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="header-title">
+      <span style="color:#13cfc9;">LEARN & MASTER</span><br>
+      <span>THE RIGHT TRADING SKILLS</span>
+    </div>
+    
+    <p>JOIN US AS WE DELVE INTO THE INDUSTRY LEADING APPROACH TO SIMPLE, CONSISTENT, AND PROFITABLE TRADING</p><br>
+    <p>THE MOST FEASIBLE AND REALISTIC WAY TO CAPITAL GAINS IN THE FINANCIAL INDUSTRY</p>
+    <div class="mentorship-preference">
+        <a href="">DAY TRADING</a>
+        <a href="">SWING TRADING</a>
+        <a href="">INDICATOR TRADING</a>
+        <a href="">QUANTITATIVE TRADING</a>
+    </div>
+    <div class="mentorship-overview">
+        <a href=""><i class="fa-solid fa-star"></i> Position Sizing</a>
+        <a href=""><i class="fa-solid fa-star"></i> Quantitative-Analytics</a>
+        <a href=""><i class="fa-solid fa-star"></i> Performance Curve</a>
+        <a href=""><i class="fa-solid fa-star"></i> Stochastic Modelling</a>
+        <a href=""><i class="fa-solid fa-star"></i> EA Design</a>
+        <a href=""><i class="fa-solid fa-star"></i> EA Programming</a>
+        <a href=""><i class="fa-solid fa-star"></i> Artificial Intelligence</a>
+    </div>
+    
+  </header>
+
+  <!--------------------- Copyright Message------------->
+  <div class="footer poppins-regular">
+    <div class="copyright">
+      <div class="logo-icon">
+        <span>&copy; 2019-2025 protocolcapitals.com. All rights reserved.</span>
+        <span>Disclaimer: We are not affiliated with any Propriety Firm or Organisation, Inc.</span>
+      </div>
+      <div class="social-pages">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a> 
+      </div>
+    </div>
+  </div>
+
+  <!-------------------------------Comment------------
+  <div class="container">
+    <h2 class="section-title">Choose Your Challenge</h2>
+
+    <div class="challenge">
+      <h2>Instant Funding Challenge</h2>
+      <ul>
+        <li>Capital: $10,000 – $100,000</li>
+        <li>No evaluation phase</li>
+        <li>Profit target: 10%</li>
+        <li>Max daily loss: 5%</li>
+        <li>Max overall loss: 10%</li>
+        <li>Profit Split: 70/30</li>
+        <li><a href="#">Download NDA Form (PDF)</a></li>
+      </ul>
+      <button class="btn" onclick="addToCart('Instant Funding Challenge')">Register for Challenge</button>
+    </div>
+
+    
+
+    <div class="challenge">
+      <h2>2 Stage Challenge</h2>
+      <ul>
+        <li>Capital: $25,000 – $200,000</li>
+        <li>Stage 1: 10% profit target</li>
+        <li>Stage 2: 5% profit target</li>
+        <li>Max loss: 10%</li>
+        <li>Profit Split: 80/20</li>
+        <li><a href="#">Download NDA Form (PDF)</a></li>
+      </ul>
+      <button class="btn" onclick="addToCart('2 Stage Challenge')">Register for Challenge</button>
+    </div>
+
+    <div class="challenge">
+      <h2>Swing Trading Challenge</h2>
+      <ul>
+        <li>Capital: $50,000 – $500,000</li>
+        <li>Hold trades over the weekend</li>
+        <li>Max drawdown: 12%</li>
+        <li>Profit Split: 85/15</li>
+        <li><a href="#">Download NDA Form (PDF)</a></li>
+      </ul>
+      <button class="btn" onclick="addToCart('Swing Trading Challenge')">Register for Challenge</button>
+    </div>
+
+    <div class="benefits">
+      <h2 class="section-title">Why Choose Us</h2>
+      <ul>
+        <li>Industry leading capital access</li>
+        <li>Real-time analytics and trade feedback</li>
+        <li>24/7 support for traders</li>
+        <li>Tailored learning and challenge paths</li>
+      </ul>
+    </div>
+
+    <div class="payment">
+      <h2 class="section-title">Payment Methods</h2>
+      <div class="payment-icons">
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fas fa-university"></i>
+        <i class="fab fa-bitcoin"></i>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-amex"></i>
+        <i class="fas fa-wallet"></i>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2 class="section-title">Your Cart</h2>
+      <ul id="cartList">
+        <li>No challenge selected yet.</li>
+      </ul>
+    </div>
+  </div>
+  ------------------------------->
+
+  <script>
+    const cartList = document.getElementById('cartList');
+    function addToCart(item) {
+      const listItems = Array.from(cartList.children);
+      if (listItems[0] && listItems[0].textContent === 'No challenge selected yet.') {
+        cartList.innerHTML = '';
+      }
+      const li = document.createElement('li');
+      li.textContent = item;
+      cartList.appendChild(li);
+    }
+  </script>
+</body>
+</html>
