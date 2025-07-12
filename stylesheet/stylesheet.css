@@ -253,7 +253,7 @@ li:hover:after, li:hover:after{
     margin-bottom: 0.5rem;
 }
 .services p a:hover, .solution p a:hover, .company p a:hover{
-    color: #ffffff;
+    border-bottom: 2px solid black;
 }
 
 /* Style for LOgin Page */
