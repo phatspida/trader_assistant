@@ -1,0 +1,424 @@
+*{
+    box-sizing: border-box;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body{
+    /* background: #c8cac9; */
+    margin: 0;
+    padding: 0;
+    /* position: relative;
+    background-image: url('3409297.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; */
+}
+
+/* ------------Navigation--------------- */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: #0f172a;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+.left-nav{
+    display: flex;
+    flex-basis: 80%;
+    padding-left: 10px;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    flex-basis: 20%;
+    justify-content: space-between;
+}
+.left-nav ul, .right-nav .nav-link ul{
+    padding: 0;
+}
+.left-nav ul li, .right-nav .nav-link ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    margin-top: 5px;
+    width: 0px;
+    background: transparent;
+    transition: width .7s ease, background-color .5s ease;
+  }
+  
+.left-nav ul li a, .right-nav .nav-link ul li a{
+    text-decoration: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+li:hover:after, li:hover:after{
+    cursor: pointer;
+    width: 100%;
+    background: rgb(120, 119, 119);
+}
+.right-nav .nav-icon{
+    margin-right: 1.6rem;
+}
+.right-nav .nav-icon span{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ------------------Container--------------------- */
+.container{
+    display: flex;
+    background: #f3f3f3;
+}
+.left-section {
+    width: 11%;                /* Adjust the width as necessary */
+    left: 0;                   /* Keeps it on the left side */
+    /*border-right: 2px solid black;*/
+}
+.right-section{
+    width: 24%;
+    right: 0;
+    /*border-left: 2px solid black;*/
+}
+.left-section, .right-section {
+    position: sticky;          /* Sticky position for modern browsers */
+    top: 5rem;                    /* Keeps it at the top until the footer is near */
+    height: 100vh;             /* Full viewport height */                
+    padding: 0 20px;
+    z-index: 1;
+    overflow: auto;
+}
+.left-section ul{
+    padding: 0;
+    list-style-type: none;
+}
+.left-section ul li{
+    padding: 1.3rem 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.left-section ul li:hover{
+    cursor:pointer
+}
+.right-section h4{
+    text-align: center;
+    margin: 5px;
+}
+.advert-post{
+    width: 98%;
+    margin: 0 auto; 
+}
+.advert-post img{
+    width: 100%;
+    border: 1px solid transparent;
+}
+.main-content{
+    flex-basis: 65%;
+    background: #ffffff;
+}
+.centered-element{
+    width: 90%;
+    margin: auto;
+    
+}
+.video-thumbnail{
+    margin-top: 35px;
+}
+.video-thumbnail img{
+    border: 1px solid transparent;
+}
+/* ---------- Navigation Button--------- */
+.page-button-container{
+    width: 70%;
+    display: flex;
+    flex-basis: 80%;
+    margin: 40px auto;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.page-button{
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: 20px;
+    padding: 6px 15px;
+    color: #000;
+    border-radius: 3px;
+    background: #f3f3f3;
+}
+.page-button:hover{
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* ------------------Footer------------------- */
+.footer{
+    font-size: 1rem;
+    padding: 0;
+}
+.top-footer{
+    background: #ffffff;
+}
+.copyright{
+    display: flex;
+    justify-content: space-around;
+    background: #000;
+    color: #a09f9f;
+    padding: 15px 0;
+}
+.logo-icon span{
+    margin-left: 20px;
+}
+.social-pages a{
+    margin-left: 2rem;
+    display: inline-block;
+}
+.social-pages a i{
+    color: white;
+}
+.quick-links{
+    display: flex;
+    margin: 0 40px;
+    
+}
+.about{
+    flex-basis: 25%;
+}
+.about-col{
+    display: flex;
+    align-items:baseline;
+    margin-bottom: 15px;
+}
+.about-col .icon{
+    flex-basis: 15%;
+}
+.about-col .content{
+    flex-basis: 80%;
+}
+.about-col .content p{
+    margin: 0;
+}
+.other-services{
+    flex-basis: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+.services p a, .solution p a, .company p a{
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.services p, .solution p, .company p{
+    margin-bottom: 0.5rem;
+}
+.services p a:hover, .solution p a:hover, .company p a:hover{
+    color: #ffffff;
+}
+
+/* Style for LOgin Page */
+.login_logout_background{
+    margin: 0;
+    padding: 0;
+    /* background-image: url('3409297.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; */
+
+}
+.login_container{
+    width: 35vw;
+    margin: 32px auto;
+    border: 2px solid transparent;
+    padding: 0 30px;
+    border-radius: 5px;
+    background: #e3e4e3;
+    
+}
+.company_logo{
+    width: 35%;
+    margin: 20px auto 25px;
+    padding: 10px;
+}
+.company_logo img{
+    border: 1px solid transparent;
+    width: 100%;
+    border-radius: 4px;
+}
+#name, #login_id, #password, #country{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    font-size: 16px;
+    outline: 0;
+}
+.form_submit{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 40px;
+    border-radius: 4px;
+    width: 100%;
+    color: #000;
+    border: 1px solid transparent;
+    background: rgb(158, 158, 158);
+}
+.form_submit:hover{
+    color: #fff;
+    background: rgb(0, 0, 211);
+    border: 1px solid transparent;
+}
+.login-bottom-section{
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.login-bottom-section a{
+    text-decoration: none;
+    color: #353434;
+}
+.login-bottom-section a:hover{
+    color: #000000;
+}
+.user_logout{
+    text-align: center;
+}
+
+/* -----------------CSS for Contact Form-------------- */
+.contact-page-container{
+    display: flex;
+    width: 90%;
+    margin: 50px auto 40px;
+    justify-content: space-between;
+}
+.contact-section, .contact-form-section{
+    flex-basis: 49%;
+    background: #e0dfdf;
+}
+.contact-column-header{
+    padding: 10px 0;
+    background: #0b1a42;
+    text-align: center;
+    color: #ffffff;
+}
+.contact-column-header > h4, h2, p{
+    margin: 0;
+}
+.contact-column-body{
+    margin: 15px 0;
+}
+.top-row, .bottom-row{
+    display: flex;
+    justify-content: space-around;
+}
+.top-row .left-column, .top-row .right-column, .bottom-row .left-column, .bottom-row .right-column{
+    flex-basis: 44%;
+    text-align: center;
+    padding: 40px 0;
+}
+.top-row .left-column i, .top-row .right-column i, .bottom-row .left-column i, .bottom-row .right-column i{
+    font-size: 25px;
+    color: #0b1a42;
+}
+.top-row .left-column h4, .top-row .right-column h4, .bottom-row .left-column h4, .bottom-row .right-column h4{
+    margin: 15px auto 0;
+    color: #0b1a42;
+}
+.central-contact-form{
+    width: 98%;
+    margin: 30px auto;
+    text-align: center;
+}
+.contact-column-body input{
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+.contact-column-body .form-data{
+    width: 48%;
+    height: 40px;
+}
+.contact-column-body .complaint{
+    width: 97%;
+    height: 200px;
+    resize: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.contact-column-body .submit{
+    padding: 5px 20px;
+    background: #0b1a42;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+/* -----------Blinking Message--------------- */
+.blink {
+  animation: blinker 2s linear infinite;
+  text-align: center;
+  color: #000000;
+  font-size: 50px;
+}
+  
+@keyframes blinker {
+    from { opacity: 1.0; }
+    30% { opacity: 0.3; }
+    to { opacity: 1.0; }
+}
+
+/* Media Query for Mobile Devices with breakpoints */
+ @media screen and (max-width: 480px){
+    body {
+        background: #73a4b1;
+    }
+} 
