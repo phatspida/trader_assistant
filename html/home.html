@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PROTOCOL | Get Funded </title>
+  <link rel="stylesheet" href="../stylesheet/stylesheet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/6aff91fdb7.js" crossorigin="anonymous"></script>
   <link rel="icon" href="../images/favsicon.png">
-  <link rel="stylesheet" href="../stylesheet/stylesheet.css">
+  
 
   <style>
     * {
@@ -23,7 +24,25 @@
       color: #fff;
       overflow-x: hidden;
     }
-    header {
+    header{
+      padding: 22px 0;
+      background: #01050e;
+      z-index: 100;
+      position: sticky;
+      top: 0;
+    }
+    nav{
+      background: transparent !important;
+      
+    }
+    .left-nav{
+      display: flex;
+      flex-basis: 100%;
+      padding-left: 10px;
+      justify-content: center;
+    }
+    
+    main {
       position: relative;
       height: 95vh;
       overflow: hidden;
@@ -34,7 +53,7 @@
       text-align: center;
       color: #fff;
     }
-    header video {
+    main video {
       position: absolute;
       top: 0;
       left: 0;
@@ -43,7 +62,7 @@
       object-fit: cover;
       z-index: -2;
     }
-    header::before {
+    main::before {
       content: "";
       position: absolute;
       top: 0;
@@ -53,7 +72,7 @@
       background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(15,23,42,0.8));
       z-index: -1;
     }
-    header h1 {
+    main h1 {
       font-size: 4rem;
       font-weight: 700;
       margin-bottom: 1rem;
@@ -62,7 +81,7 @@
       transform: translateY(30px);
       animation: fadeInUp 2s ease-out forwards;
     }
-    header p {
+    main p {
       font-weight: 700;
       font-size: 1.2rem;
       color: #ffffff;
@@ -72,7 +91,7 @@
       animation: fadeInUp 1.5s ease-out forwards;
       line-height: 0.9rem;
     }
-    .header-title{
+    .main-title{
       font-weight: 700;
       font-size: 6rem;
       margin-bottom: 2.8rem;
@@ -258,10 +277,10 @@
       text-decoration: underline;
     }
     @media (max-width: 768px) {
-      header h1 {
+      main h1 {
         font-size: 2.5rem;
       }
-      header p {
+      main p {
         font-size: 1rem;
       }
     }
@@ -270,11 +289,24 @@
 </head>
 <body>
   <header>
+    <nav>
+      <div class="left-nav">
+        <ul class="poppins-regular">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="index.html">E-Learner</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="get-funded.html">Get-Funded</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
     <video autoplay muted loop playsinline preload="auto">
       <source src="../videos/background-video2.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="header-title">
+    <div class="main-title">
       <span style="color:#13cfc9;">LEARN & MASTER</span><br>
       <span>THE RIGHT TRADING SKILLS</span>
     </div>
@@ -297,7 +329,7 @@
         <a href=""><i class="fa-solid fa-star"></i> Artificial Intelligence</a>
     </div>
     
-  </header>
+  </main>
 
   <!--------------------- Copyright Message------------->
   <div class="footer poppins-regular">
