@@ -155,10 +155,9 @@
       color: #F5C518;
     }
     .overview-section{
-      height: 70vh;
       background-color: #eeeeee;
       display: flex;
-      width: 90%;
+      width: 80%;
       margin: 8rem auto;
       backdrop-filter: blur(5px);
       color: #000000;
@@ -166,29 +165,128 @@
       justify-content: space-around;
     }
     .overview{
-      flex-basis: 24%;
+      flex-basis: 31.5%;
       border-radius: 5px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Added box shadow */
     }
-    .overview-header{
-      padding: 0 1rem 1.5rem 1rem;
+    /*------------------------Green------------------*/
+    .overview-header-green{
+      background: linear-gradient(to bottom, #011f0e 40%, #000000 100%);
+    }
+    .overview-green{
+      border: 2px solid #04ae70;
+      background: linear-gradient(to bottom, #adeae8 1%, #ffffff 100%);
+    }
+    .green-border-background{
+      border: 1px solid #04ae70;;
+      background: #011f0e;
+    }
+    #section-green{
+      color: #04ae70;
+    }
+    /*------------------------Blue------------------*/
+    .overview-header-blue{
       background: linear-gradient(to bottom, #04073b 40%, #000000 100%);
+    }
+    .overview-blue{
+      border: 2px solid #3b82f6;
+      background: linear-gradient(to bottom, #bbd7ef 1%, #ffffff 100%);
+    }
+    .blue-border-background{
+      border: 1px solid #3b82f6;
+      background: #04073b;
+    }
+    #section-blue{
+      color: #3b82f6;
+    }
+    /*------------------------Gold------------------*/
+    .overview-header-gold{
+      background: linear-gradient(to bottom, #f1b10e 40%, #000000 100%);
+    }
+    .overview-gold{
+      color: #fbbf24;
+      border: 2px solid #fbbf24;
+      background: linear-gradient(to bottom, #ebd8a9 1%, #ffffff 100%);
+    }
+    .gold-border-background{
+      border: 1px solid #fbbf24;
+      background: #fbbf24;
+    }
+    #section-gold{
+      color: #fbbf24;
+    }
+    /*------------------------Black------------------*/
+    .overview-black{
+      color: #000000;
+      border: 2px solid #000000;
+      background: linear-gradient(to bottom, #b0afaf 1%, #ffffff 100%);
+    }
+    /*------------------------Red------------------*/
+    .overview-header-red{
+      background: linear-gradient(to bottom, #400202 40%, #000000 100%);
+    }
+    .overview-red{
+      border: 2px solid #fa3535;
+      background: linear-gradient(to bottom, #f3bbbb 1%, #ffffff 100%);
+    }
+    .red-border-background{
+      border: 1px solid #fa3535;
+      background: #400202;
+    }
+    #section-red{
+      color: #fa3535;
+    }
+    
+    .rounder-border{
+      border-radius: 20px;
+      padding: 7px 14px;
+    }
+    .overview-header{
+      padding: 1rem 1rem 1.5rem 1rem;
       text-align: center;
       color: #ffffff;
       border: 1px solid transparent;
-      border-radius: 5px;
+      border-radius: 3px 3px 5px 5px;
       font-size: 0.8rem;
     }
     .overview-header img{
-      width: 8rem;
+      width: 5rem;
+      
+    }
+    .overview-image{
+      border-radius: 8px;
+      margin: 2rem 0 1rem 0;
+      position: relative;
+      display: inline-block;
+      padding: 2px; /* thickness of border */
+      background: conic-gradient(
+        from 270deg, white, #0000ff, white,#0000ff, white,#0000ff
+      );
+    }
+    .image-content{
+      background: #04073b;
+      border-radius: 7px;
+      padding: 5px;
+    }
+    #study-course{
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .duration{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 1.1rem 0 1rem 0;
     }
     .overview-content{
-      padding: 0.7rem;
+      padding: 2rem 2rem 0rem 2rem;
       overflow: none;
       font-size: 1rem;
       line-height: 1.7rem;
-      font-style: italic;
       text-align: justify;
+    }
+    .overview-content:last-child{
+      margin-bottom: 2rem;
     }
     .overview-content p{
       padding-top: 10px;
@@ -197,6 +295,9 @@
       font-weight: 700;
       font-size: 0.55rem;
       color: #000000;
+    }
+    .overview-content-header{
+      line-height: 2rem;
     }
     .container {
       max-width: 1200px;
@@ -320,12 +421,50 @@
       color: #60a5fa;
       text-decoration: underline;
     }
+
+
     @media (max-width: 768px) {
       main h1 {
         font-size: 2.5rem;
       }
       main p {
         font-size: 1rem;
+      }
+      .mentorship-preference, .mentorship-overview{
+        flex-direction: column;
+        align-items: center;
+      }
+      .mentorship-preference a, .mentorship-overview a{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      .overview-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .overview {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+    /* For tablets and larger screens */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      main h1 {
+        font-size: 3.5rem;
+      }
+      main p {
+        font-size: 1.2rem;
+      }
+      .overview-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .overview {
+        flex-basis: 45%;
+        margin-bottom: 20px;
       }
     }
     
@@ -339,7 +478,7 @@
           <li><a href="home.html">Home</a></li>
           <li><a href="index.html">E-Learner</a></li>
           <li><a href="#">Tools</a></li>
-          <li><a href="get-funded.html">Get-Funded</a></li>
+          <!--<li><a href="get-funded.html">Get-Funded</a></li>-->
           <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
@@ -375,62 +514,160 @@
   </main>
   <hr>
   <div class="overview-section">
-    <section class="overview">
-      <div class="overview-header">
-        <img src="../images/award3.png">
-        <h1>Day Trading</h1>
+    <section class="overview overview-green">
+      <div class="overview-header overview-header-green">
+        <div class="overview-image">
+          <div class="image-content">
+            <img src="../images/award4.png">
+          </div>
+        </div>
+        <h1 id="study-course">DAY / SWING TRADING</h1>
+        <div class="duration">
+          <h1 class="rounder-border green-border-background" id="section-green">4 WEEKS</h1>
+        </div>
       </div>
-      <div class="overview-content">
-        <p><span><i class="fa-solid fa-star"></i></span> Day trading is a trading strategy that involves buying and selling financial instruments within the same trading day. 
-        <p><span><i class="fa-solid fa-star"></i></span> Traders aim to capitalize on short-term price movements, often using technical analysis and chart patterns to make quick decisions.
-        <p><span><i class="fa-solid fa-star"></i></span> This approach requires a keen understanding of market trends, risk management, and the ability to react swiftly to market changes.</p>
-        <p><span><i class="fa-solid fa-star"></i></span> For more information, visit our <a href="https://www.protocolcapitals.com/day-trading">Day Trading Guide</a>.</p>
-        <p><span><i class="fa-solid fa-star"></i></span> Day trading is a trading strategy that involves buying and selling financial instruments within the same trading day. </p>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-green">MODULE 1</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
+      </div>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-green">MODULE 2</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
+      </div>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-green">MODULE 3</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
       </div>
     </section>
-    <section class="overview">
-      <div class="overview-header">
-        <img src="../images/award3.png">
-        <h1>Swing Trading</h1>
+    <section class="overview overview-red">
+      <div class="overview-header overview-header-red">
+        <div class="overview-image">
+          <div class="image-content">
+            <img src="../images/award4.png">
+          </div>
+        </div>
+        <h1 id="study-course">INDICATOR TRADING</h1>
+        <div class="duration">
+          <h1 class="rounder-border red-border-background" id="section-red">4 WEEKS</h1>
+        </div>
       </div>
-      <div class="overview-content">
-        <p>Day trading is a trading strategy that involves buying and selling financial instruments 
-          within the same trading day. Traders aim to capitalize on short-term price movements, 
-          often using technical analysis and chart patterns to make quick decisions. This approach requires 
-          a keen understanding of market trends, risk management, and the ability to react swiftly to market changes.</p>
-        <p>For more information, visit our <a href="https://www.protocolcapitals.com/day-trading">Day Trading Guide</a>.</p>
-        <p>Day trading is a trading strategy that involves buying and selling financial instruments within the 
-          same trading day. </p>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-red">MODULE 1</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
+      </div>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-red">MODULE 2</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
+      </div>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-red">MODULE 3</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
       </div>
     </section>
-    <section class="overview">
-      <div class="overview-header">
-        <img src="../images/award3.png">
-        <h1>Indicator Trading</h1>
+    <section class="overview overview-blue">
+      <div class="overview-header overview-header-blue">
+        <div class="overview-image">
+          <div class="image-content">
+            <img src="../images/award3edit.png">
+          </div>
+        </div>
+        <h1 id="study-course">QUANTITATIVE TRADING</h1>
+        <div class="duration">
+          <h1 class="rounder-border blue-border-background" id="section-blue">4 WEEKS</h1>
+        </div>
       </div>
-      <div class="overview-content">
-        <p>Day trading is a trading strategy that involves buying and selling financial instruments 
-          within the same trading day. Traders aim to capitalize on short-term price movements, 
-          often using technical analysis and chart patterns to make quick decisions. This approach requires 
-          a keen understanding of market trends, risk management, and the ability to react swiftly to market changes.</p>
-        <p>For more information, visit our <a href="https://www.protocolcapitals.com/day-trading">Day Trading Guide</a>.</p>
-        <p>Day trading is a trading strategy that involves buying and selling financial instruments within the 
-          same trading day. </p>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-blue">MODULE 1</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
       </div>
-    </section>
-    <section class="overview">
-      <div class="overview-header">
-        <img src="../images/award3.png">
-        <h1>Quantitative Trading</h1>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-blue">MODULE 2</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
       </div>
-      <div class="overview-content">
-        <p>Day trading is a trading strategy that involves buying and selling financial instruments 
-          within the same trading day. Traders aim to capitalize on short-term price movements, 
-          often using technical analysis and chart patterns to make quick decisions. This approach requires 
-          a keen understanding of market trends, risk management, and the ability to react swiftly to market changes.</p>
-        <p>For more information, visit our <a href="https://www.protocolcapitals.com/day-trading">Day Trading Guide</a>.</p>
-        <p>Day trading is a trading strategy that involves buying and selling financial instruments within the 
-          same trading day. </p>
+      <div class="overview-content ">
+        <div class="overview-content-header">
+          <h3 id="section-blue">MODULE 3</h3>
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div class="overview-content-body">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, 
+            accusamus eius? Maxime repudiandae sapiente at rem mollitia ratione 
+            enim doloremque voluptatibus recusandae velit unde minima neque molestiae 
+            eveniet, consequatur tempore!
+          </p>
+        </div>
       </div>
     </section>
   </div>
